@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <title>Home - Schedule It</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css' rel='stylesheet' />
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1><img src="./img/schedule-it-logo.jpg" alt="Schedule It Logo" class="logo"/> Schedule It</h1>
+            <nav class="top-bar">
+                <button class="menu-btn" onclick="expandOrCollapseMenu()">Menu</button>
+                <ul class="nav-list" id="nav-list">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="manage-event.html">Manage Event</a></li>
+                    <li><a href="availability.html">Availability</a></li>
+                    <li><a href="integration.html">Calendar Integration</a></li>                    
+                    <li><a href="#" onclick="toggleDarkMode()">Toggle Dark Mode</a></li>
+                    <li><a href="profile.html"><img src="./img/profile.png" alt="Profile Icon" class="profile-icon"/></a></li>
+                </ul>
+            </nav>
+        </div>
+        <hr>
+    </header>
+    <main>
+        <div class="welcome-section">
+            <h2>Welcome back, Alex!</h2>
+            <div class="social-buttons">
+                <button class="social-button" onclick="shareOnFacebook()">
+                    <img src="./img/facebook-logo.png" alt="Facebook" class="social-icon">
+                </button>
+                <button class="social-button" onclick="shareOnLinkedIn()">
+                    <img src="./img/linkedin-logo.png" alt="LinkedIn" class="social-icon">
+                </button>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="calendar-section">
+                <div id="calendar"></div>
+            </div>
+            <div class="info-section">
+                <section class="whats-new">
+                    <h3 class="collapsible">What's new?</h3>
+                    <div class="content">
+                        <div class="summary">
+                            <ul>
+                                <li><strong>Seamless Calendar Integration:</strong> Connect your Google Calendar and Outlook accounts for automatic syncing and effortless scheduling. Say goodbye to double-bookings!</li>
+                                <li><strong>Enhanced User Interface:</strong> Enjoy a more intuitive design that makes scheduling a breeze. Select a time and generate a shareable meeting link with just a few clicks.</li>
+                            </ul>
+                            <p><span class="more">Click on the tile to see more!</span></p>
+                        </div>
+                        <ul class="full-content">
+                            <li><strong>Seamless Calendar Integration:</strong> Connect your Google Calendar and Outlook accounts for automatic syncing and effortless scheduling. Say goodbye to double-bookings!</li>
+                            <li><strong>Enhanced User Interface:</strong> Enjoy a more intuitive design that makes scheduling a breeze. Select a time and generate a shareable meeting link with just a few clicks.</li>
+                            <li><strong>Dark Mode:</strong> Customize your experience with our new Dark Mode option. Ideal for low-light environments and reducing eye strain.</li>
+                            <li><strong>New Menu Layout:</strong> Discover our redesigned menu for quicker access to your favorite features and a more streamlined navigation experience.</li>
+                            <li><strong>Accessibility Improvements:</strong> We've made our app more accessible to all users with enhanced support for screen readers and improved keyboard navigation.</li>
+                            <li><strong>Bug Fixes & Performance Enhancements:</strong> We've tackled various bugs and optimized performance for a smoother, more reliable experience.</li>
+                        </ul>
+                        
+                    </div>
+                </section>
+                <section class="testimonials">
+                    <h3 class="collapsible">Testimonials</h3>
+                    <div class="content">
+                        <div class="summary">
+                            <p>"I have been using Schedule It for a month now and connecting with clients has become hassle-free and convenient."</p>
+                            <p>— David Thompson, 35</p>
+                            <span class="more">Click on the tile to see more!</span>
+                        </div>
+                        <div class="full-content">
+                            <p>"I have been using Schedule It for a month now and connecting with clients has become hassle-free and convenient."</p>
+                            <p>— David Thompson, 35</p>
+                            <p>"I have connected with 100+ aspiring DevOps professionals by using Schedule It. It's quick, simple, and fulfills my passion to help me connect with the dev community."</p>
+                            <p>— Sarah Kim, 24</p>
+                            <p>"Scheduling interviews have never been easier, I would recommend any professional worker to try this website."</p>
+                            <p>— Emily Parker, 41</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <hr>
+    <footer>
+        <nav>
+            <ul class="footer-list">
+                <li><a href="#terms-of-service">Terms of Service</a></li>
+                <li>&copy; Schedule It, All rights reserved 2024</li>
+                <li><a href="#privacy-policy">Privacy Policy</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js'></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/calendar.js"></script>
+    <script src="scripts/dark-mode.js"></script>
+    <script src="scripts/collapsible-menu.js"></script>
+    <script src="scripts/social-sharing.js"></script>
+</body>
+</html>

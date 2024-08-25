@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <title>Dashboard - Schedule It</title>
+    <link rel="stylesheet" href="styles/dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1><img src="./img/schedule-it-logo.jpg" alt="Schedule It Logo" class="logo"/> Schedule It</h1>
+            <nav class="top-bar">
+                <button class="menu-btn" onclick="expandOrCollapseMenu()">Menu</button>
+                <ul class="nav-list" id="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="manage-event.html">Manage Event</a></li>
+                    <li><a href="availability.html">Availability</a></li>
+                    <li><a href="integration.html">Calendar Integration</a></li>                    
+                    <li><a href="#" onclick="toggleDarkMode()">Toggle Dark Mode</a></li>
+                    <li><a href="profile.html"><img src="./img/profile.png" alt="Profile Icon" class="profile-icon"/></a></li>
+                </ul>
+            </nav>
+        </div>
+        <hr>
+    </header>
+    <main>
+        <section class="dashboard-header">
+            <h1>Dashboard</h1>
+            <img src="./img/alex.png" alt="Profile Picture" class="profile-picture"/>
+            <div>
+                <h2>Alex Chen</h2>
+                <p><a href="https://schedule-it.com/alex-chen">https://schedule-it.com/alex-chen</a></p>
+            </div>
+        </section>
+        <hr>
+        <section>
+            <h2>Events</h2>
+            <div class="events-search">
+                <div>
+                    <input type="text" id="searchInput" placeholder="Search by event name">
+                    <button id="searchButton">Search</button>
+                </div>
+                <button id="create-event">Create an Event</a></button>
+            </div>
+            <div class="events-list" id="eventsList">
+                <div class="event-card">
+                    <h3>Get to know me</h3>
+                    <p>30 minute meeting</p>
+                    <button>Copy Link</button>
+                    <button>Edit</button>
+                </div>
+                <div class="event-card">
+                    <h3>Deloitte Coffee Chat</h3>
+                    <p>30 minute meeting</p>
+                    <button>Copy Link</button>
+                    <button>Edit</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <hr>
+    <footer>
+        <nav>
+            <ul class="footer-list">
+                <li><a href="#terms-of-service">Terms of Service</a></li>
+                <li>&copy; Schedule It, All rights reserved 2024</li>
+                <li><a href="#privacy-policy">Privacy Policy</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/dark-mode.js"></script>
+    <script src="scripts/collapsible-menu.js"></script>
+    <script src="scripts/search.js"></script>
+    <script src="scripts/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <title>Calendar Integration - Schedule It</title>
+    <link rel="stylesheet" href="styles/integration.css">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css' rel='stylesheet' />
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1><img src="./img/schedule-it-logo.jpg" alt="Schedule It Logo" class="logo"/> Schedule It</h1>
+            <nav class="top-bar">
+                <button class="menu-btn" onclick="expandOrCollapseMenu()">Menu</button>
+                <ul class="nav-list" id="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="manage-event.html">Manage Event</a></li>
+                    <li><a href="availability.html">Availability</a></li>
+                    <li><a href="integration.html" class="active">Calendar Integration</a></li>                    
+                    <li><a href="#" onclick="toggleDarkMode()">Toggle Dark Mode</a></li>
+                    <li><a href="profile.html"><img src="./img/profile.png" alt="Profile Icon" class="profile-icon"/></a></li>
+                </ul>
+            </nav>
+        </div>
+        <hr>
+    </header>
+    <main>
+        <section class="integration-header">
+            <h1>Calendar Integration</h1>
+            <img src="./img/alex.png" alt="Profile Picture" class="profile-picture"/>
+            <div>
+                <h2>Alex Chen</h2>
+                <p><a href="https://schedule-it.com/alex-chen">https://schedule-it.com/alex-chen</a></p>
+            </div>
+        </section>
+        <br>
+        <div class="calendar-integration">
+            <div class="calendar-section">
+                <div id="calendar"></div>
+            </div>
+            <div class="integration-options">
+                <h3>Third-Party Calendar</h3>
+                <button class="integration-button">Connect Google Calendar</button>
+            </div>
+        </div>
+    </main>
+    <hr>
+    <footer>
+        <nav>
+            <ul class="footer-list">
+                <li><a href="#terms-of-service">Terms of Service</a></li>
+                <li>&copy; Schedule It, All rights reserved 2024</li>
+                <li><a href="#privacy-policy">Privacy Policy</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js'></script>
+    <script src="scripts/dark-mode.js"></script>
+    <script src="scripts/calendar.js"></script>
+    <script src="scripts/collapsible-menu.js"></script>
+</body>
+</html>

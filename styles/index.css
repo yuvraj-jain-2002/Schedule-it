@@ -1,0 +1,283 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.dark-mode {
+    background-color: #1e1e1e;
+    color: #cfcfcf;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #4a90e2;
+    padding: 1em;
+    color: white;
+}
+
+.dark-mode .header-content {
+    background-color: #333;
+}
+
+.logo {
+    height: 50px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.menu-btn {
+    background-color: #357abd;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.dark-mode .menu-btn {
+    background-color: #555;
+    color: #cfcfcf;
+}
+
+.menu-btn:hover {
+    background-color: #2a5a9d;
+}
+
+.dark-mode .menu-btn:hover {
+    background-color: #444;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: 0;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: white;
+    font-weight: normal;
+    padding: 0.5em 1em;
+}
+
+.dark-mode .nav-list a {
+    color: #cfcfcf;
+}
+
+.nav-list a.active, .nav-list a:hover {
+    font-weight: bold;
+    background-color: #357abd;
+    border-radius: 5px;
+}
+
+.dark-mode .nav-list a.active, .dark-mode .nav-list a:hover {
+    background-color: #444;
+}
+
+.profile-icon {
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    display: block; 
+}
+
+.dark-mode .profile-icon {
+    border-color: #cfcfcf;
+}
+
+main {
+    padding: 2em;
+}
+
+.dark-mode main {
+    background-color: #2a2a2a;
+}
+
+h2 {
+    color: #4a90e2;
+}
+
+.dark-mode h2 {
+    color: #cfcfcf;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+.dark-mode .main-content {
+    background-color: #333;
+    border-color: #555;
+}
+
+/* Added the min and max width so when the 
+   screen size is changed, it accommodates
+   properly */
+
+.calendar-section {
+    flex: 2;
+    text-align: center;
+    background-color: #fff;
+    padding: 2em;
+    border: 2px solid #e6e6e6;
+    border-radius: 10px;
+    min-width: 500px;
+    max-width: 700px;
+}
+
+.dark-mode .calendar-section {
+    background-color: #555;
+    color: #cfcfcf;
+}
+
+/* Removed the section for calendar image 
+   as there is no need of it anymore. */
+
+.info-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    background-color: #fff;
+    padding: 2em;
+    border: 2px solid #e6e6e6;
+    border-radius: 10px;
+    min-width: 300px;
+    max-width: 100%;
+}
+
+.dark-mode .info-section {
+    background-color: #555;
+    color: #cfcfcf;
+}
+
+section h3 {
+    color: #4a90e2;
+    border-bottom: 2px solid #4a90e2;
+    padding-bottom: 0.5em;
+    cursor: pointer; /* Add cursor pointer for collapsibles */
+}
+
+.dark-mode section h3 {
+    color: #cfcfcf;
+    border-bottom: 2px solid #333;
+}
+
+.summary {
+    cursor: pointer;
+}
+
+.welcome-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.welcome-section h2 {
+    margin: 0;
+    padding-right: 20px;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.social-button:hover .social-icon {
+    opacity: 0.8;
+}
+
+.full-content {
+    display: none;
+    max-height: 200px;
+    overflow-y: scroll;
+    padding-top: 1em;
+    margin-bottom: 10px;
+}
+
+.footer-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: #4a90e2;
+    color: white;
+}
+
+.dark-mode .footer-list {
+    background-color: #333;
+    color: #cfcfcf;
+}
+
+.footer-list a {
+    text-decoration: none;
+    color: white;
+    padding: 0 1em;
+}
+
+.dark-mode .footer-list a {
+    color: #cfcfcf;
+}
+
+.footer-list a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #357abd;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5em 1em;
+    }
+    
+    .main-content {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5em 1em;
+    }
+}
+
+.content {
+    overflow: hidden;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <title>Manage Event - Schedule It</title>
+    <link rel="stylesheet" href="styles/manage-event.css">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css' rel='stylesheet' />
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1><img src="./img/schedule-it-logo.jpg" alt="Schedule It Logo" class="logo"/> Schedule It</h1>
+            <nav class="top-bar">
+                <button class="menu-btn" onclick="expandOrCollapseMenu()">Menu</button>
+                <ul class="nav-list" id="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="manage-event.html" class="active">Manage Event</a></li>
+                    <li><a href="availability.html">Availability</a></li>
+                    <li><a href="integration.html">Calendar Integration</a></li>                    
+                    <li><a href="#" onclick="toggleDarkMode()">Toggle Dark Mode</a></li>
+                    <li><a href="profile.html"><img src="./img/profile.png" alt="Profile Icon" class="profile-icon"/></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <hr>
+
+    <main>
+        <section class="manage-event-header">
+            <h1>Manage Event</h1>
+            <img src="./img/alex.png" alt="Profile Picture" class="profile-picture"/>
+            <div>
+                <h2>Alex Chen</h2>
+                <p><a href="https://schedule-it.com/alex-chen">https://schedule-it.com/alex-chen</a></p>
+            </div>
+        </section>
+
+        <div class="manage-event-content">
+            <div class="calendar-section">
+                <div id="calendar"></div>
+            </div>
+            <div class="form-widget-section"> 
+                <div class="create-event-section">
+                    <h3>Create an Event</h3>
+                    <p>Current Timezone: EST</p>
+                    <p> Click on the specific date, and submit the form to create an event.</p>
+                </div>
+                <div class="time-zone-widget">
+                    <h3>Enter a Time Zone to know the current time</h3>
+                    <input type="text" id="timezone-input" placeholder="Enter Time Zone, e,g. GMT, EST, IST, etc.">
+                    <button onclick="fetchTimeFromTimezone()">Fetch Time</button>
+                    <p id="timezone-result"></p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <section>
+            <div class="events-section-header">
+                <h2>Upcoming Events</h2>
+                <!-- <button>Filter</button> -->
+            </div>
+            <table class="events-table">
+                <thead>
+                    <tr>
+                        <th>Event Name</th>
+                        <th>Type</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>One-on-one meeting</td>
+                        <td>30 minute meeting</td>
+                        <td>24th May 2024</td>
+                        <td>9:00 AM</td>
+                        <td>
+                            <!-- I have not implemented these buttons as they require backend and database -->
+                            <button>View</button>
+                            <button>Reschedule</button>
+                            <button>Cancel</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <section>
+            <div class="events-section-header">
+                <h2>Past Events</h2>
+                <!-- <button>Filter</button> -->
+            </div>
+            <table class="events-table">
+                <thead>
+                    <tr>
+                        <th>Event Name</th>
+                        <th>Type</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Team meeting</td>
+                        <td>60 minute meeting</td>
+                        <td>20th April 2024</td>
+                        <td>2:00 PM</td>
+                        <td>
+                            <!-- I have not implemented these buttons as they require backend and database -->
+                            <button>View</button>
+                            <button>Reschedule</button>
+                            <button>Cancel</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <hr>
+    <footer>
+        <nav>
+            <ul class="footer-list">
+                <li><a href="#terms-of-service">Terms of Service</a></li>
+                <li>&copy; Schedule It, All rights reserved 2024</li>
+                <li><a href="#privacy-policy">Privacy Policy</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js'></script>
+    <script src='scripts/calendar.js'></script>
+    <script src="scripts/time-zone-widget.js"></script>
+    <script src="scripts/dark-mode.js"></script>
+    <script src="scripts/collapsible-menu.js"></script>
+    <script src="scripts/create-event.js"></script>
+</body>
+</html>
